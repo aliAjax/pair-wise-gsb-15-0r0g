@@ -1,5 +1,5 @@
 export type WorkflowStatus='draft'|'published'|'archived';
-export type NodeKind='start'|'form'|'approval'|'condition'|'automation'|'notify'|'end';
+export type NodeKind='start'|'form'|'approval'|'condition'|'automation'|'notify'|'subflow'|'end';
 export type NodeState='unconfigured'|'configuring'|'valid'|'invalid';
 export interface FormField {id:string;label:string;type:'text'|'number'|'amount'|'date'|'select'|'attachment';required:boolean;options?:string[]}
 export interface FlowNode {id:string;type:NodeKind;position:{x:number;y:number};data:{label:string;state:NodeState;config:Record<string,any>}}
